@@ -1,0 +1,20 @@
+login/register
+home
+profile
+wish list
+orders’ details
+logout (login)
+cart
+
+
+
+add to cart
+chekout 1 (address)
+chekout 2 (delivery method)
+chekout 3 (payment method)
+chekout 4 (order review)
+
+about us
+terms and conditions
+faq
+contact us
