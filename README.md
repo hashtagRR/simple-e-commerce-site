@@ -12,62 +12,62 @@ This is a coursework/learning project, not production software.
 Both sides connect to a MySQL database named `zeus` (see
 `Admin/connection.php` and `Client/connection.php`, both hardcoded to
 `root` with no password on `localhost`). No `.sql` schema file is included
-in this repo — the tables need to be inferred and created by hand from the
-queries in the PHP files (products/categories, clients, orders, cart,
+in this repo, so the tables need to be inferred and created by hand from
+the queries in the PHP files (products/categories, clients, orders, cart,
 wishlist, addresses, admins, etc. are all referenced across the codebase).
 
 ## Admin side (`Admin/`)
 
-- **Login** (`index_admin.php` / `adminlogin_handle.php`) — admin
+- **Login** (`index_admin.php` / `adminlogin_handle.php`): admin
   authentication.
-- **Home** (`admin_home.php`) — dashboard with navigation to the sections
+- **Home** (`admin_home.php`): dashboard with navigation to the sections
   below.
-- **Add New Admin** (`new_admin.php` / `new_adminhandle.php`) — create
+- **Add New Admin** (`new_admin.php` / `new_adminhandle.php`): create
   additional admin accounts.
-- **Add New Product** (`new_product.php` / `newproduct_handle.php`) — add
+- **Add New Product** (`new_product.php` / `newproduct_handle.php`): add
   products to the catalogue, with image upload into `Admin/img/`.
 - **Edit/Delete Product** (`productedit.php` / `productedit_handle.php`,
-  `productdelete_handle.php`) — manage existing products.
-- **Our Products / Category** (`category.php`) — browse the catalogue from
+  `productdelete_handle.php`): manage existing products.
+- **Our Products / Category** (`category.php`): browse the catalogue from
   the admin side.
 - **Client Details** (`client_detail.php`, `search_client.php`,
-  `clientdelete_handle.php`) — view, search and remove registered
+  `clientdelete_handle.php`): view, search and remove registered
   customers.
-- **Orders** (`orderdelete_handle.php`) — manage/delete orders.
+- **Orders** (`orderdelete_handle.php`): manage/delete orders.
 - **Profile / Password** (`admin_profile.php`, `profile_handle.php`,
-  `pass_handle.php`) — the logged-in admin's own account settings.
-- **Search** (`admin_search.php`, `search.php`) — product search from the
+  `pass_handle.php`): the logged-in admin's own account settings.
+- **Search** (`admin_search.php`, `search.php`): product search from the
   admin panel.
 
 ## Client side (`Client/`)
 
 - **Register / Login** (`index_client.php`, `registerhandle.php`,
-  `loginhandle.php`) — customer account creation and authentication.
+  `loginhandle.php`): customer account creation and authentication.
 - **Home & browsing** (`client_home.php`, `category1.php`/`category2.php`/
-  `category3.php`, `search.php`) — the storefront, with categories for
+  `category3.php`, `search.php`): the storefront, with categories for
   Vitamins, Minerals, and Herbal Products.
-- **Cart** (`addtocart.php`, `addtocart1.php`, `cart.php`) — add products
+- **Cart** (`addtocart.php`, `addtocart1.php`, `cart.php`): add products
   to a shopping cart and view it.
 - **Wishlist** (`wishlist.php`, `addtowishlisthandle.php`,
-  `wishlisthandle.php`, `wishlistdeletehandle.php`) — save products for
+  `wishlisthandle.php`, `wishlistdeletehandle.php`): save products for
   later.
-- **Checkout flow**: address (`address.php`/`addresshandle.php`) →
-  delivery method (`delivery.php`/`deliveryhandle.php`) → payment
-  (`payment.php`/`paymenthandle.php`) → order review/placement
+- **Checkout flow**: address (`address.php`/`addresshandle.php`), then
+  delivery method (`delivery.php`/`deliveryhandle.php`), then payment
+  (`payment.php`/`paymenthandle.php`), then order review/placement
   (`order_overview.php`, `order_handle.php`, `orderhandle.php`,
   `placeorderhandle.php`).
-- **Order history** (`customer_orders.php` / `customerordershandle.php`) —
+- **Order history** (`customer_orders.php` / `customerordershandle.php`):
   view past orders.
 - **Profile / Password** (`profile.php`/`profilehandle.php`,
-  `passwordhandle.php`) — the logged-in customer's own account settings.
-- **Static pages** (`policy.php`) — terms and conditions.
+  `passwordhandle.php`): the logged-in customer's own account settings.
+- **Static pages** (`policy.php`): terms and conditions.
 
 `Client/web pages.txt` is the original author's page-flow outline
-(login/register → home → profile/wishlist/orders → cart → checkout steps
-1-4 → static pages) and matches the files above.
+(login/register, then home, then profile/wishlist/orders, then cart, then
+checkout steps 1-4, then static pages) and matches the files above.
 
 Note: `Client/adminlogin_handle.txt` is a stray duplicate of the admin
-login handler saved as plain text rather than PHP — it isn't executed by
+login handler saved as plain text rather than PHP. It isn't executed by
 either side of the site.
 
 ## Running it
